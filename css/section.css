@@ -1,0 +1,168 @@
+/* ============================================================
+   BOOKING
+============================================================ */
+.booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+@media (max-width: 900px) { .booking-grid { grid-template-columns: 1fr; } }
+
+.booking-event-types { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+.booking-event-type {
+  display: flex; align-items: center; gap: 10px;
+  padding: 16px; border-radius: var(--radius-sm);
+  background: var(--glass-bg); border: 1px solid var(--glass-border);
+  font-size: 14px; font-weight: 500;
+  transition: transform .3s, border-color .3s;
+}
+.booking-event-type:hover { transform: translateY(-3px); border-color: var(--purple-400); }
+.booking-event-type .ico { font-size: 20px; }
+
+.booking-form { display: flex; flex-direction: column; gap: 14px; }
+.booking-form h3 { font-family: var(--font-display); font-size: 24px; letter-spacing: .03em; margin-bottom: 4px; }
+.booking-form input, .booking-form select, .booking-form textarea {
+  width: 100%; padding: 14px 16px; border-radius: var(--radius-sm);
+  background: rgba(255,255,255,.04); border: 1px solid var(--glass-border);
+  color: var(--text-hi); font-family: inherit; font-size: 14px;
+  transition: border-color .3s, background .3s;
+}
+.booking-form input::placeholder, .booking-form textarea::placeholder { color: var(--text-low); }
+.booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus {
+  outline: none; border-color: var(--purple-400); background: rgba(124,42,232,.07);
+}
+.booking-form select { color-scheme: dark; }
+.booking-form textarea { resize: vertical; min-height: 90px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+.booking-form .btn { width: 100%; justify-content: center; margin-top: 4px; }
+.form-note { font-size: 11px; color: var(--text-low); text-align: center; }
+
+/* Success popup */
+.success-popup {
+  position: fixed; inset: 0; z-index: 3000;
+  background: rgba(5,2,10,.85);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden; transition: opacity .35s, visibility .35s;
+}
+.success-popup.open { opacity: 1; visibility: visible; }
+.success-popup-card {
+  text-align: center; padding: 40px; max-width: 360px;
+}
+.success-popup-card .check {
+  width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 18px;
+  background: var(--grad-brand); display: flex; align-items: center; justify-content: center; font-size: 26px;
+}
+.success-popup-card h3 { font-family: var(--font-display); font-size: 24px; margin-bottom: 8px; }
+.success-popup-card p { color: var(--text-mid); font-size: 14px; line-height: 1.6; margin-bottom: 22px; }
+
+/* ============================================================
+   SHOWREEL
+============================================================ */
+#showreel { text-align: center; }
+.showreel-frame {
+  position: relative; max-width: 880px; margin: 36px auto 0;
+  border-radius: var(--radius-md); overflow: hidden;
+  border: 1px solid var(--glass-border); aspect-ratio: 16/9;
+}
+.showreel-frame iframe { width: 100%; height: 100%; border: 0; }
+.showreel-playlist { display: flex; gap: 12px; overflow-x: auto; margin-top: 26px; padding-bottom: 6px; }
+.showreel-thumb {
+  flex: 0 0 200px; border-radius: var(--radius-sm); overflow: hidden; cursor: pointer;
+  border: 1px solid var(--glass-border); position: relative; aspect-ratio: 16/9;
+}
+.showreel-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.showreel-thumb .lbl {
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 8px 10px;
+  font-size: 11px; background: linear-gradient(transparent, rgba(0,0,0,.85)); color: #fff;
+}
+.showreel-thumb.active { border-color: var(--cyan-300); }
+
+/* ============================================================
+   EVENTS
+============================================================ */
+.events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 18px; margin-top: 36px; }
+.event-card { overflow: hidden; }
+.event-poster { aspect-ratio: 4/5; position: relative; overflow: hidden; }
+.event-poster img { width: 100%; height: 100%; object-fit: cover; }
+.event-status {
+  position: absolute; top: 12px; left: 12px;
+  font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 999px; backdrop-filter: blur(6px);
+}
+.event-status.upcoming { background: rgba(94,231,255,.18); color: var(--cyan-300); border: 1px solid var(--cyan-300); }
+.event-status.past { background: rgba(255,255,255,.08); color: var(--text-mid); border: 1px solid var(--glass-border); }
+.event-body { padding: 16px; }
+.event-name { font-weight: 600; font-size: 15px; }
+.event-date { font-size: 12px; color: var(--cyan-300); margin-top: 4px; font-family: var(--font-mono); }
+.event-loc { font-size: 12px; color: var(--text-low); margin-top: 2px; }
+
+/* ============================================================
+   PREMIUM FEATURES STRIP
+============================================================ */
+#premium-features { padding: 90px 0 60px; overflow: hidden; }
+.pf-heading { text-align: center; margin-bottom: 50px; display: flex; flex-direction: column; }
+.pf-heading .line1 { font-family: var(--font-mono); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--cyan-300); }
+.pf-heading .line2 {
+  font-family: var(--font-display); font-size: clamp(34px,5vw,54px);
+  background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.pf-track-wrap { position: relative; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.pf-track { display: flex; gap: 18px; width: max-content; animation: pfScroll 28s linear infinite; }
+.pf-track:hover { animation-play-state: paused; }
+@keyframes pfScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.pf-card {
+  flex: 0 0 180px; padding: 26px 20px; border-radius: var(--radius-md);
+  background: var(--glass-bg); border: 1px solid var(--glass-border); text-align: center;
+}
+.pf-card .ico { font-size: 30px; margin-bottom: 14px; }
+.pf-card .lbl { font-size: 13px; font-weight: 600; line-height: 1.4; }
+
+/* ============================================================
+   MUSIC VISUALIZER (ambient, hero/footer accent)
+============================================================ */
+.viz-bars { display: flex; align-items: flex-end; gap: 3px; height: 20px; }
+.viz-bars span { width: 3px; background: var(--cyan-300); border-radius: 2px; }
+
+/* ============================================================
+   PARTICLES / LASER CANVAS LAYERS
+============================================================ */
+#particlesCanvas {
+  position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: .5;
+}
+.laser-layer {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+}
+.laser-beam {
+  position: absolute; top: -10%; width: 2px; height: 120%;
+  background: linear-gradient(var(--cyan-300), transparent 70%);
+  opacity: .25; filter: blur(1px);
+  animation: laserSweep 7s ease-in-out infinite;
+}
+@keyframes laserSweep {
+  0%,100% { transform: rotate(-12deg) translateX(0); }
+  50% { transform: rotate(12deg) translateX(40px); }
+}
+
+/* Custom cursor */
+.cursor-dot {
+  position: fixed; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--cyan-300); z-index: 9998; pointer-events: none;
+  transform: translate(-50%,-50%); transition: transform .15s, opacity .3s;
+}
+.cursor-ring {
+  position: fixed; width: 32px; height: 32px; border-radius: 50%;
+  border: 1px solid var(--purple-400); z-index: 9998; pointer-events: none;
+  transform: translate(-50%,-50%); transition: transform .25s var(--ease), opacity .3s, width .2s, height .2s;
+}
+.cursor-ring.hover { width: 52px; height: 52px; border-color: var(--cyan-300); }
+@media (max-width: 900px) { .cursor-dot, .cursor-ring { display: none; } }
+
+/* Page transition overlay */
+#pageTransition {
+  position: fixed; inset: 0; z-index: 9997; pointer-events: none;
+  background: var(--bg-900); transform: scaleY(0); transform-origin: top;
+}
+#pageTransition.active { animation: pageWipe .8s var(--ease); }
+@keyframes pageWipe {
+  0% { transform: scaleY(1); transform-origin: top; }
+  50% { transform: scaleY(0); transform-origin: top; }
+  50.01% { transform: scaleY(0); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
