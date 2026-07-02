@@ -112,11 +112,6 @@ window.CONFIG = {
       "alt": "Garba night"
     },
     {
-      "src": "images/gallery/Garba1.jpeg",
-      "category": "garba",
-      "alt": "Garba night"
-    },
-    {
       "src": "images/gallery/Festival1.jpeg",
       "category": "festival",
       "alt": "Festival stage"
