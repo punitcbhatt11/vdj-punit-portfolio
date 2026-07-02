@@ -256,10 +256,10 @@ window.CONFIG = {
   },
   "events": [
     {
-      "name": "New Year EDM Night",
-      "date": "2026-12-31",
-      "location": "Rajkot",
-      "poster": "images/events/event-1.jpg",
+      "name": "Shree Ram Navmi Sobhayatra 2026",
+      "date": "2026-03-27",
+      "location": "Talala Gir",
+      "poster": "images/events/ram1.jpeg",
       "status": "upcoming"
     },
     {
