@@ -102,17 +102,17 @@ window.CONFIG = {
   ],
   "gallery": [
     {
-      "src": "images/gallery/garba1.jpeg",
+      "src": "images/gallery/Garba1.jpeg",
       "category": "garba",
       "alt": "Garba night"
     },
     {
-      "src": "images/gallery/garba2.jpeg",
+      "src": "images/gallery/Garba2.jpeg",
       "category": "garba",
       "alt": "Garba night"
     },
     {
-      "src": "images/gallery/garba3.jpeg",
+      "src": "images/gallery/Garba3.jpeg",
       "category": "garba",
       "alt": "Garba night"
     },
