@@ -260,13 +260,27 @@ window.CONFIG = {
       "date": "2026-03-27",
       "location": "Talala Gir",
       "poster": "images/events/ram1.jpeg",
-      "status": "upcoming"
+      "status": "past"
     },
     {
       "name": "Garba Mahotsav",
-      "date": "2025-10-12",
+      "date": "2025-10-22",
       "location": "Talala Gir",
-      "poster": "images/events/event-2.jpg",
+      "poster": "images/events/Garba1.jpeg",
+      "status": "past"
+    },
+     {
+      "name": "Baarat on Wheel",
+      "date": "2026-02-07",
+      "location": "Saavaj resort",
+      "poster": "images/events/baarat1.jpeg",
+      "status": "past"
+    },
+    {
+      "name": "Wedding Sangeet",
+      "date": "2026-03-07",
+      "location": "van veda resort",
+      "poster": "images/events/wedding1.jpeg",
       "status": "past"
     }
   ],
