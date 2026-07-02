@@ -244,13 +244,28 @@ window.CONFIG = {
       },
       {
         "id": "uIrMnd7750k",
-        "label": "Garba Night Mix",
+        "label": "Latest Mix",
         "thumb": "https://img.youtube.com/vi/uIrMnd7750k/hqdefault.jpg"
       },
       {
         "id": "fru2zb2ytTM",
         "label": "EDM Festival Set",
         "thumb": "https://img.youtube.com/vi/fru2zb2ytTM/hqdefault.jpg"
+      },
+      {
+        "id": "w4jjmcu6vzY",
+        "label": "Traditional Garba",
+        "thumb": "https://img.youtube.com/vi/w4jjmcu6vzY/hqdefault.jpg"
+      },
+      {
+        "id": "EiYvYR_suec",
+        "label": "Devotional Mashup",
+        "thumb": "https://img.youtube.com/vi/EiYvYR_suec/hqdefault.jpg"
+      },
+      {
+        "id": "Adyy_Ih52hw",
+        "label": "Garba Night Mix",
+        "thumb": "https://img.youtube.com/vi/Adyy_Ih52hw/hqdefault.jpg"
       }
     ]
   },
